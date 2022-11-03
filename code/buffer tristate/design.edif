@@ -1,0 +1,20 @@
+(edif
+	(rename buffer_SPACE_tristate "buffer tristate")
+	(edifVersion 2 0 0)
+	(edifLevel 0)
+	(keywordMap
+		(keywordLevel 0)
+	)
+	(status
+		(written
+			(timeStamp 2020 11 19 18 18 59)
+			(author "Ricardo Correia")
+			(program "Tanner EDA S-Edit"
+				(version "16.30 build 9172")
+			)
+			(property TannerEdifVersion
+				(integer 10)
+			)
+		)
+	)
+)
