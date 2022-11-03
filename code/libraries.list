@@ -1,0 +1,5 @@
+libraries\Devices
+libraries\SPICE_Elements
+libraries\Misc
+libraries\SPICE_Commands
+libraries\SPICE_Measure

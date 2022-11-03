@@ -1,0 +1,92 @@
+#------------------------------------------------------------------------
+# 	File: 			mtc07.xst
+#	For: 			Cross-section process definition file
+#      	Vendor: 		MIETEC 
+#  	Technology: 		0.7 um CMOS (C07M) 
+# 	Technology Setup File: 	mtc07_vN.tdb
+# 	Copyright (c)  1998
+# 	Tanner Research, Inc. & FhG/IIS Germany. All rights reserved
+#------------------------------------------------------------------------
+# Handled by Raul Morais, November 2002
+#------------------------------------------------------------------------
+#conductor thickness:
+#POLY 		0.33 			(value not sure)
+#METAL1 	0.60			(value not sure)
+#METAL2 	0.71 			(value not sure)
+#METAL3 	0.98 			(value not sure)
+#
+#dielectric thickness:
+#TOX channel	0.017 	Gate Oxide 	(DS 13291/07/35)
+#TOX poly.cap 	0.045 	Well-Poly Oxide (DS 13291/07/35)
+#POLY-well 	0.46 	Field Oxide 	(value not sure)
+#M1-well 	1.14 			(value not sure)
+#M1-active 	0.94 			(value not sure)
+#M1-poly 	0.66 			(value not sure)
+#M2-well 	2.34 			(value not sure)
+#M2-active 	2.14 			(value not sure)
+#M2-poly 	1.86 			(value not sure)
+#M2-M1 		0.60 	VIA1 Oxide 	(value not sure)
+#M3-well 	3.65 			(value not sure)
+#M3-active 	3.45 			(value not sure)
+#M3-poly 	3.17 			(value not sure)
+#M3-M1 		1.91 			(value not sure)
+#M3-M2 		0.60 	VIA2 Oxide 	(value not sure)
+#
+# ****************************************************************
+#
+#     	L-Edit
+#Step 	Layer Name     Depth  Label Angle offset   Comment
+#-----------------------------------------------------------------
+gd 	- 		4.0 	p-    80 0 #  1.  Substrate
+id 	N-WELL 		2.5 	n-    70 0 #  2.  n well
+id 	P+_IMPLANT 	0.8 	p+    70 0 #  2a. p+ Implant
+id 	N+_IMPLANT 	0.8 	p+    70 0 #  2b. n+ Implant
+id 	ActPSelNotPoly 	0.3	p+    70 0 #  2c. p+ active
+id 	ActNSelNotPoly 	0.3	n+    70 0 #  2d. n+ active
+id 	CAPA_IMPLANT 	0.8 	n+p+  70 0 #  2e. capa implant
+gd 	- 		0.46 	-     45 0 #  3.  Field Oxide
+e 	ACTIVE_AREA 	0.46	-     45 0.2 #  3a. ~Field Oxide
+gd 	- 		0.017	-     90 0 #  4.  Gate Oxide
+e 	NotGate 	0.017 	-     90 0 #  4a. ~Gate Oxide
+gd 	CAPA_POLY 	0.045 	-     90 0 #  5.  Well-Poly Oxide
+e 	NotCapaPoly 	0.045 	-     90 0 #  5a. Well-Poly Oxide
+gd 	POLYSILICON 	0.33	-     45 0 #  6.  Poly 
+e 	NotPoly 	0.33	-     45 0 #  6a. ~Poly
+#
+#gd 	Plan_Poly 	0.33 	-     90 0 #  7.  Poly-Planar
+#e 	Plan_Poly 	0.33 	-     90 0 #  7a. ~Poly-Planar
+#e 	CON_ACTIVE 	0.33 	-     90 0 #  7b. ~Poly-Planar
+#e 	CON_CAP_ACTIVE 	0.33 	-     90 0 #  7c. ~Poly-Planar
+#e 	Pad 		0.33 	-     90 0 #  7d. ~Poly-Planar
+#
+gd 	- 		0.66	-     60 0 #  8.  Well-Metal Oxide
+e 	CONTACTS 	0.66 	-     60 0 #  8a.~Well-Metal Oxide
+e 	Pad 		0.66 	-     60 0 #  8b.~Well-Metal Oxide
+gd 	METAL1 		0.66 	-     90 0 #  9.  Contact Metal1
+e 	NotContacts 	0.66 	-     60 0.8 # 9a. ~Contact Metal1
+gd 	METAL1 		0.60 	-     60 0 # 10. Metal1
+e 	NotMetal1 	0.60 	-     60 0 # 10a. ~Metal1
+gd 	Plan_Metal1 	0.60 	-     60 0 # 11. Plan_Metal1
+e 	METAL1 		0.60 	-     60 0.7 # 11a. ~Plan_Metal1
+gd 	- 		0.60 	-     70 0 # 12. Via1 Oxide
+e 	VIA1 		0.60	-     70 0 # 12a. ~Via1 Oxide
+e 	PadAndNotVias 	0.60	-     70 0 # 12b. ~Via1 Oxide
+gd 	METAL2 		0.60 	-     90 0 # 13. Via1 Metal2
+e 	NotVia1 	0.60 	-     70 0.45 # 13a. ~Via1 Metal2
+gd 	METAL2 		0.71 	-     70 0 # 14. Metal2
+e 	NotMetal2 	0.71 	-     70 0 # 14a. ~Metal2
+gd 	Plan_Metal2 	0.71 	-     70 0 # 15. Plan_Metal2
+e 	METAL2 		0.71 	-     70 0.55 # 15a. ~Plan_Metal2
+#gd 	- 		0.60	-     70 0 # 16. Via2 Oxide
+#e 	VIA2 		0.60	-     70 0 # 16a. ~Via2 Oxide
+#e 	PadAndNotVias 	0.60	-     70 0 # 16b. ~Via2 Oxide
+#gd 	METAL3 		0.60 	-     90 0 # 17. Via2 Metal3
+#e 	NotVia2 	0.60 	-     70 0.5 # 17a. ~Via2 Metal3
+#gd 	METAL3 		0.98 	-     70 0 # 18. Metal3
+#e 	NotMetal3 	0.98 	-     70 0 # 18a. ~Metal3
+#gd 	Plan_Metal3 	0.98 	-     70 0 # 19. Plan_Metal3
+#e 	METAL3 		0.98 	-     70 0.75 # 19a. ~Plan_Metal3
+gd 	- 		1.00	-     70 0 # 20.  Passivation
+e 	OVERLAY 	1.00 	-     70 0 # 20a. ~Passivation
+#
+##------------------------------------------------------------------------
