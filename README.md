@@ -1,2 +1,3 @@
-# Latch-com-saida-tri-state
-simulação e desenho de um circuito digital CMOS
+# Tri-State-Output-Latch
+
+Simulation and design of a CMOS digital circuit
